@@ -1,7 +1,7 @@
-# CLAUDE.md — Project Context & Engineering Guidelines for `power-deck`
+# CLAUDE.md — Project Context & Engineering Guidelines for `helio-strake`
 
 ## 1. Project Overview
-`power-deck` is an R&D and manufacturing engineering repository for **custom-shaped, walkable marine photovoltaic-thermal (PV/T) solar panels** that replace deck non-skid surfaces while actively cooling the solar cells and collecting thermal energy via a **`1–2 mm` micro-channel polymer/composite substrate**.
+`helio-strake` (**HelioStrake**) is an R&D and manufacturing engineering repository for **custom-shaped, walkable marine photovoltaic-thermal (PV/T) solar panels** that replace deck non-skid surfaces while actively cooling the solar cells and collecting thermal energy via a **`1–2 mm` micro-channel polymer/composite substrate**.
 
 Primary reference document: [`custom-solar-non-skid-pvt-guide.md`](custom-solar-non-skid-pvt-guide.md).
 

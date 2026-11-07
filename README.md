@@ -1,12 +1,12 @@
-# Power-Deck
+# HelioStrake
 
 **Custom-Shape Walkable Non-Skid Marine Solar Panels with Active Micro-Channel Photovoltaic-Thermal (PV/T) Substrates**
 
-`power-deck` is an engineering, materials, and CAD/CAM manufacturing project focused on replacing traditional boat deck non-skid surfaces (moulded gelcoat diamond pattern, `Treadmaster`, `KiwiGrip`, or teak/synthetic decking) with **custom-shaped, step-proof photovoltaic-thermal (PV/T) deck modules**.
+`helio-strake` (**HelioStrake** — combining *Helio* [sun] and *Strake* [a continuous structural band of decking/plating on a vessel]) is an engineering, materials, and CAD/CAM manufacturing project focused on replacing traditional boat deck non-skid surfaces (moulded gelcoat diamond pattern, `Treadmaster`, `KiwiGrip`, or teak/synthetic decking) with **custom-shaped, step-proof photovoltaic-thermal (PV/T) deck modules**.
 
 ---
 
-## Why Power-Deck?
+## Why HelioStrake?
 
 Conventional marine solar installations leave `60%–75%` of sun-exposed deck surfaces unused because standard panels are rectangular and cannot conform to curved coachroofs, side decks, and hardware cutouts. Furthermore, gluing standard flexible solar panels directly to an insulated fiberglass sandwich deck (`balsa` or `PVC foam` core) creates a **thermal trap**:
 * Un-cooled flush deck panels reach **`65°C–85°C` (`150°F–185°F`)** under summer sun.
@@ -14,7 +14,7 @@ Conventional marine solar installations leave `60%–75%` of sun-exposed deck su
 * The deck becomes painfully hot underfoot and radiates **`40–70 W/m²`** of heat through the deckhead into the cabin below.
 * Nearly **`700 W/m²` of absorbed solar thermal energy** is wasted.
 
-**Power-Deck** integrates a high-traction embossed fluoropolymer PV laminate directly over a thin **`1–2 mm` micro-channel active cooling substrate**:
+**HelioStrake** integrates a high-traction embossed fluoropolymer PV laminate directly over a thin **`1–2 mm` micro-channel active cooling substrate**:
 1. **Restores `+12% to +18%` electrical output** by holding cell temperatures near `28°C–45°C`.
 2. **Harvests `400–550 W_th/m²` of usable thermal energy** (`4.0–5.5 kW` of heat across `10 m²` of deck area) for domestic hot water (calorifier pre-heating), cabin hydronic heating, or thermal desalination—or dumps excess heat to the sea via a keel/hull heat exchanger.
 3. **Keeps the deck barefoot-cool (`~30°C–38°C`)** with certified wet anti-slip traction (**DIN 51130 R11/R12**) and stops solar heat transfer into the cabin.
