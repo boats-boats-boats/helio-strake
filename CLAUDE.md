@@ -31,6 +31,12 @@ When generating designs, calculations, BOMs, CAD/CAM scripts, or manufacturing i
      * Keep polycarbonate loop temperatures **`<50°C–55°C`**.
      * Use **pure USP food-grade Propylene Glycol + Deionized Water** (never automotive ethylene glycol containing amine, borate, or silicate inhibitors that craze polycarbonate).
      * Never use **acetoxy-cure (vinegar) silicone** or ketone/ester solvents on polycarbonate; specify **neutral-cure alkoxy silicone**, **polyurethane (`Sikaflex 295 UV`)**, **UV urethane-acrylate (`Loctite AA 3311`)**, or **acrylic PSA**.
+6. **Phase 3 Commercial Qualification Material Gate (Mandatory Substrate Shift Before Scaling):**
+   * **Polycarbonate (`PC`) is acceptable ONLY for Phase 1 coupons and controlled Phase 2 owner-vessel validation** (where pump stagnation, coolant chemistry, and boatyard cleaners are strictly owner-controlled).
+   * **Before selling Phase 3 commercially with a multi-year warranty**, the substrate **must shift away from Polycarbonate** (which fails `85°C / 85% RH` IEC 61215 damp-heat hydrolysis, `85°C–95°C` pump-off stagnation, and third-party boatyard chemical exposure like acetone, diesel drips, teak acid/caustic cleaners, and acetoxy silicone) to one of three qualification-grade architectures:
+     1. **`PVDF` (`Kynar 740`) Micro-Channel Substrate** (thermally/laser-welded or single-shot `150°C` laminated; chemically inert, survives `100°C+` stagnation and `IEC 61215` damp heat/thermal cycling),
+     2. **`PP-R` / `PE-RT` Polymer Capillary Mat** cast in `ATH`/`SiC`-filled thermally conductive marine polyurethane or toughened epoxy (zero CNC micro-milling, zero weld seams, immune to boiling water, solvents, and `-40°C` freeze cycles), or
+     3. **CNC-Routed `Divinycell H130` / `G10` Core + Hard-Anodized `5083`/`6061` Aluminum or High-Modulus Carbon-Epoxy Skin** (bonded to the Stage-1 PV skin with a compliant `0.5 mm` thermally conductive neutral-cure silicone or polyurethane elastomer to absorb CTE mismatch across `-40°C to +85°C` IEC thermal cycles).
 
 ---
 
