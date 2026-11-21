@@ -347,21 +347,85 @@ While CNC-milled polycarbonate (`2.5 mm` base + `0.38 mm` `Lexan 8010` UV-bonded
 
 ---
 
-## 6. Recommended R&D Prototyping Plan (Phase 1 Proof-of-Concept)
+## 6. Phase 1 R&D Prototyping Plan: Side-by-Side Qualification-Grade Coupons (`300 × 300 mm`)
 
-Before buying a full-size `$25,000` industrial solar laminator, you can validate both the **non-skid ETFE embossing** and the **`1.5 mm` Polycarbonate micro-channel cooling substrate** on `300 × 300 mm` (`12" × 12"`) test coupons for under **`$1,500`**:
+Rather than prototyping only Polycarbonate and discovering durability limits later, Phase 1 should build **four identical Stage-1 `300 × 300 mm` (`12" × 12"`) walkable PV skins** and bond them to the **three commercial qualification-grade substrates** plus an **un-cooled fiberglass deck control**—for a total Phase 1 materials + bench-tooling budget of **`$1,800 – $2,600`**.
 
-1. **Cast the Non-Skid Embossing Mat:**
-   * Lay down a master sample of your preferred aggressive deck texture (e.g., `Treadmaster` diamond pattern or coarse `Awlgrip Griptex`) and cast a `3 mm` sheet of high-temperature **platinum-cure silicone rubber (`Smooth-On Mold Max 60` or `Sylgard 184`, heat-resistant to `200°C+`)** over it. This becomes your reusable top vacuum-lamination embossing blanket.
-2. **Build a Two-Stage `300 × 300 mm` Polycarbonate Micro-Channel PV/T Coupon:**
-   * **Stage 1 (Top PV Non-Skid Skin at `150°C`):** Lay up `9` back-contact IBC cells (or `18` half-cells) with `250 µm` ETFE + `POE` + `80 g/m²` fiberglass scrim + `POE` + thin `50 µm` PET/Kapton rear dielectric film. Cure it inside a high-temperature **silicone vacuum bag on a PID-controlled heated aluminum platen (`150°C` for `15 min`)** with your silicone embossing mat on top.
-   * **Stage 2 (Polycarbonate `1.5 mm` Micro-Channel Substrate + Room-Temp Bonding):**
-     * CNC-mill a `1.5 mm` wide × `1.5 mm` deep serpentine or bifurcated micro-channel array (`1.0 mm` ribs) into a **`2.5 mm` black polycarbonate base sheet**, leaving a solid `12 mm` un-channeled perimeter border.
-     * Cap the top of the channels with a **`0.38 mm` (`15 mil`) clear polycarbonate film (`Lexan 8010`)** using either a `25 µm` roll-coated layer of **UV-curable urethane-acrylate adhesive (`Loctite AA 3311`)** cured under vacuum, or diode laser transmission welding along the ribs.
-     * Bond the cured Stage-1 PV skin onto the `0.38 mm` polycarbonate cap at **room temperature (`25°C–40°C`)** under vacuum bag pressure using a `150 µm` **thermally conductive acrylic pressure-sensitive adhesive transfer tape (`3M 8815`)** or a thin film of `2-part thermally conductive polyurethane`.
-3. **Bench-Test Under Full Sun:**
-   * Place two identical coupons side-by-side in direct sun (one un-cooled on a cored fiberglass deck cutout, one circulating `25°C` USP propylene glycol/water at `0.4 L/min`), and log:
-     * Cell temperature via laminated `Type-T` thermocouples.
-     * $V_{oc}$, $I_{sc}$, and $P_{max}$ electrical curves.
-     * Coolant $\Delta T$ (`Inlet` vs `Outlet`) to calculate exact thermal wattage extracted ($Q = \dot{m} \cdot c_p \cdot \Delta T$).
-     * Wet barefoot and deck-shoe slip angle (`DIN 51130` ramp test equivalent) and point-load impact resistance (dropping a `1 kg` steel winch handle from `1 meter`).
+### Step 1: Shared Phase 1 Bench Tooling & Non-Skid PV Skins (All 4 Coupons Identical)
+1. **Cast the Reusable Non-Skid Embossing Mat (`~$150`):**
+   * Lay down a `350 × 350 mm` master sample of your preferred deck texture (`Treadmaster` diamond or coarse `Awlgrip Griptex`) and cast a `3 mm` scrim-reinforced sheet of high-temperature **platinum-cure silicone rubber (`Smooth-On Mold Max 60`, `290°C` rated)** over it.
+2. **Laminate `4×` Identical Stage-1 Non-Skid PV Skins (`150°C`):**
+   * Stack per coupon: `250 µm` plasma-treated ETFE + `250 µm` UV-pass POE + `80 g/m²` woven E-glass scrim + `250 µm` POE + `9` full (or `18` half-cut) back-contact IBC cells on a simple copper/FPC jumper backplane + `50 µm` Kapton/PET or `400 µm` BN-filled POE rear dielectric layer + laminated `Type-T` thermocouple behind the center cell.
+   * Cure each coupon on a `350 × 350 mm` PID-controlled heated aluminum platen (`150°C` for `15 min`) inside a reusable silicone vacuum bag with the cast embossing mat on top.
+   * **Gate Check:** Inspect all 4 cured PV skins with a converted NIR camera (`EL test`) to verify zero micro-cracks before mounting them to the cooling substrates.
+
+---
+
+### Step 2: Build the 4 Phase 1 Test Coupons (3 Commercial Candidates + 1 Control)
+
+| Coupon | Substrate Architecture | Phase 1 Bench Fabrication Steps (`300 × 300 mm`) | Est. Material Cost (Per Coupon) |
+| :--- | :--- | :--- | :--- |
+| **Coupon A (`PVDF` Micro-Channel)** | **`PVDF` (`Kynar 740`)** `3.0 mm` base + `0.5 mm` `PVDF` cap *(Sourced from Total Plastics Baltimore / McMaster-Carr)* | 1. CNC-mill `1.5 × 1.5 mm` serpentine/bifurcated channels (`1.0 mm` ribs, `12 mm` solid perimeter) into `3.0 mm` natural `PVDF` sheet.<br>2. **Cap Sealing (2 methods to test):**<br>&nbsp;&nbsp;• *Method A1 (Hot-Plate Thermal Weld):* Sandwich `0.5 mm` `PVDF` cap film + routed base between two `PTFE` sheets on a `210°C–220°C` flat heat press (`15–25 sec` light kiss-pressure) to fuse ribs without collapsing channels.<br>&nbsp;&nbsp;• *Method A2 (Single-Shot `150°C` Lamination):* Apply `0.8 bar` regulated air pressure inside the pre-capped `PVDF` channels and laminate the Stage-1 POE/ETFE stack *directly* onto corona-treated `PVDF` in one shot (testing whether `PVDF`'s `140°C` HDT / `177°C` melt eliminates Stage-2 bonding!).<br>3. For Method A1, flame/plasma-treat the `PVDF` cap and bond Stage-1 PV skin using `3M Primer 94` + `150 µm` `3M 8815` thermally conductive acrylic PSA or `2-part` conductive polyurethane. | `~$85 – $120` |
+| **Coupon B (`PP-R`/`PE-RT` Capillary Mat)** | **`2.5–3.5 mm` OD Thin-Wall `PP-R` / `PE-RT` Capillary Tubes** in `ATH`/`SiC`-filled Marine Polyurethane | 1. Arrange `18–22` parallel `3.0 mm` OD (`0.3 mm` wall) `PE-RT` or `PP-R` micro-tubes on `12 mm` centers (looped or manifolded into two `10 mm` `PP-R` headers via thermal socket/barbed stubs).<br>2. Place the Stage-1 PV skin face-down inside a `300 × 300 × 5.0 mm` waxed melamine perimeter dam.<br>3. Mix `2-part` flexible marine polyurethane (or toughened epoxy) loaded with **`60 wt%` Aluminum Trihydrate (`ATH`)** or **`Al2O3` / `SiC`** powder (`k ≈ 1.4–1.8 W/m·K`), vacuum-degas the mix for `3 min`, pour over the capillary tube array, and pull light vacuum (`0.4 bar`) to consolidate void-free against the PV rear sheet. *(Zero CNC micro-milling, zero weld seams!)* | `~$55 – $80` |
+| **Coupon C (`Divinycell`/Al Composite Core)** | **`6 mm` `Divinycell H130` (or `G10`) Routed Core + `0.8 mm` Hard-Anodized `5083`/`6061` Al (or Carbon-Epoxy) Skin** | 1. CNC-route `3.0 × 3.0 mm` fluid labyrinth channels (`5 mm` ribs, `12 mm` solid perimeter) into `6 mm` `Divinycell H130` foam (or `6 mm` `G10` sheet).<br>2. Brush-seal the routed foam channels with 2 thin coats of low-viscosity high-$T_g$ epoxy (`>100°C` post-cured) and bond a rear Delrin dual-port manifold boss.<br>3. Vacuum-bag a **`0.8 mm` hard-anodized aluminum** sheet (or **`2-ply` pitch-carbon/epoxy skin**) onto the routed face using toughened structural epoxy (`Gurit Spabond` / `3M AF 163`).<br>4. **Critical CTE Buffer:** Bond the cured Stage-1 PV skin onto the anodized aluminum face at room temperature under vacuum using a **`0.5 mm` compliant layer of thermally conductive neutral-cure alkoxy silicone** (`k ≈ 1.5 W/m·K`) so aluminum CTE (`23 ppm/K`) does not shear silicon cells during `-40°C/+85°C` cycles. | `~$65 – $95` |
+| **Coupon D (Baseline Control)** | **Un-Cooled Cored Fiberglass Deck Cutout** | Bond the 4th Stage-1 PV skin directly onto a `300 × 300 × 20 mm` fiberglass-balsa/foam deck cutout with `Sikaflex 291i` to establish the baseline un-cooled cell temp, electrical loss, and underside cabin radiation. | `~$35` |
+
+*(Optional Coupon E: Build a `2.5 mm` Polycarbonate + `0.38 mm` `Lexan 8010` UV-bonded coupon solely as an inexpensive thermal benchmark—run it through the exact same Step 3 torture tests below to empirically observe its stagnation/chemical limits firsthand.)*
+
+---
+
+### Step 3: Phase 1 Performance & Accelerated Abuse Qualification Suite
+
+Before committing `$10k–$15k` to Phase 2 Beneteau 40 tooling, run all 4 coupons through a two-week outdoor + bench torture matrix:
+
+1. **Outdoor Side-by-Side Solar & Thermal Yield Benchmark:**
+   * Circulate `25°C` USP propylene glycol/water at `0.4 L/min` through Coupons A, B, and C while leaving Coupon D un-cooled in full sun (`>850 W/m²`).
+   * Log: Cell temp ($T_{\text{cell}}$), surface barefoot temp, $V_{oc}/I_{sc}/P_{max}$ curves, coolant $\Delta T$ ($Q = \dot{m} c_p \Delta T$), and underside temp below the substrate.
+2. **Pump-Off Stagnation Torture Test (`90°C` Soak):**
+   * Fill Coupons A, B, and C with `30%` PG/water, cap the ports (with an expansion relief loop), and bake in a `90°C` insulated hot box for `72 hours` (simulating a multi-week summer pump failure on the hard).
+   * Follow immediately with a **`2.5 bar` (`36 PSI`) `30-minute` hydrostatic leak check**.
+3. **Rapid Thermal Shock Cycling (`-20°C` $\leftrightarrow$ `+85°C`, `25` Cycles):**
+   * Move coupons directly between a `-20°C` chest freezer (`2 hrs`) and an `+85°C` hot box (`2 hrs`) for `25` cycles.
+   * Re-image with the **NIR EL camera** to confirm zero cell micro-cracks, zero CTE shear on Coupon C's aluminum skin, and zero delamination on Coupon A's `PVDF` bondline.
+4. **Boatyard Chemical Swipe Test:**
+   * Apply drops/wipes of **acetone, diesel fuel, oxalic acid teak cleaner, bleach deck wash, and acetoxy silicone** onto exposed perimeter edges and underside manifold bosses; inspect after `48 hours` under `10×` magnification for crazing, swelling, or edge-seal softening.
+5. **Walkable Traction & Impact Test:**
+   * Measure wet barefoot and boat-shoe slip angle (`DIN 51130` ramp test equivalent) on the embossed ETFE surface.
+   * Drop a **`1.0 kg` steel winch handle from `1.0 meter`** onto the center cell of each coupon, then re-verify with the NIR EL camera and hydrostatic pressure test.
+
+---
+
+## 7. Phase 2 Beneteau Oceanis 40 (*Novella*) Execution Plan: Build vs. Buy Tooling & Local Annapolis CNC Sourcing
+
+Once Phase 1 selects the winning substrate(s), Phase 2 scales to a full-vessel refit on the **2009 Beneteau Oceanis 40 (`LOA 39'10"`, `Beam 12'10"`)** covering both the **walkable deck non-skid islands** and a **custom composite hardtop bimini + dodger** (`~12–14.5 m²` total active PV/T area = **`2.5–3.0 kWp` electrical + `5.0–6.5 kW_th` thermal** across `12–18` modular panels).
+
+### A. Smart Panel Segmentation (Cutting Tooling CapEx by `60%+`)
+* Cap the largest single module at **`1.85 × 0.95 m` (`72" × 38"`)**:
+  * **Hardtop Bimini (`~4.3 m²`):** `3` cambered panels (`~1.8 × 0.8 m`) dropped into molded `4.5 mm` flush recessed pockets, with coolant manifolds and MPPT wiring concealed inside hollow perimeter edge beams and routed down one aft stainless arch tube.
+  * **Hardtop Dodger (`~1.8 m²`):** `2` cambered panels (`~0.8 × 1.1 m`).
+  * **Coachroof, Side-Deck & Foredeck Non-Skid (`~6.0–8.5 m²`):** `7–13` custom-polygon walkable modules (`≤1.8 × 0.45 m` strips and `≤1.5 × 0.8 m` foredeck triangles).
+* **Live Phase 2 $\rightarrow$ Phase 3 Bridge Trial:** Use **Coupon C (`Divinycell H130` routed core + carbon/anodized-Al skin)** integrated directly into the hardtop bimini/dodger structural core, and run the winning polymer deck substrate (**Coupon B `PP-R`/`PE-RT` capillary mat** or **Coupon A `PVDF`**) across the curved foredeck and side-deck non-skid islands.
+
+### B. Phase 2 Build vs. Buy vs. Outsource Tooling Matrix (`Beneteau 40` Scale)
+
+| # | Tooling System | **BUY (Turnkey)** | **BUILD (DIY In-House)** | **OUTSOURCE / LOCAL ACCESS** | **Phase 2 Strategy** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **1** | **Dual-Chamber Vacuum Laminator (`150°C`, `1.85 × 0.95 m`)** | `$16,000 – $28,000` | `1/2"` `6061` Al platen + 4–6 zone silicone heaters + PID SSRs + 2-chamber hinged silicone membrane lid + `8 CFM` 2-stage vacuum pump: **`$3,200 – $5,200`** | N/A | **BUILD** (`saves $15k+`; dual-chamber valve prevents scrim air-trapping) |
+| **2** | **`4×8 ft` Vacuum-Table CNC Router** *(Substrates, hardtop ribs, jigs)* | `$14,000 – $28,000` | DIY kit (`$4.5k–$8.5k`, high Z-depth error risk) | **Local CNC Job Shops** (`$1.5k–$3k`) or **Open Works Baltimore** (`Laguna SmartShop` `4×8` ATC vacuum-table CNC membership `~$150/mo`) | **OUTSOURCE / MAKERSPACE** for Novella; BUY only in Phase 3 |
+| **3** | **Solar Cell Cutting (IBC Fractional Cells)** | Solar laser dicer: `$12k–$25k`<br>`30–50W` MOPA fiber galvo: **`$3,500 – $5,500`** | Do not hand-scribe | Buy factory pre-cut `1/2` or `1/3` Maxeon/Aiko IBC cells: **`$0` CapEx** | **BUY Pre-Cut `1/2`–`1/3` Cells** (`$0`) or **`$4k` Fiber Galvo** for mitered foredeck edges |
+| **4** | **Cell Interconnects (Flex-PCB Backplanes)** | Auto stringer: `$35k–$80k` | CNC alignment pin jigs + paste dispenser + `400×400 mm` IR hotplate: **`$700 – $1,200`** | Custom polyimide/Cu **Flex-PCBs** (`JLCPCB`/`PCBWay` with MOSFET bypass pads): **`$600 – $1,400`** | **OUTSOURCE Flex-PCBs + BUILD/BUY `$900` reflow jig** |
+| **5** | **Substrate Sealing / Casting Tooling** *(Depends on Phase 1 Winner)* | Laser welder: `$18k–$45k` | **Coupon B (`PP-R` Mat):** Waxed perimeter dams + degas pot (`$300`)<br>**Coupon C (`Divinycell`/Al):** Vacuum bag (`$200`)<br>**Coupon A (`PVDF`):** Thermal press or `0.8 bar` laminator air manifold (`$400–$1,200`) | N/A | **BUILD** (choosing Coupon B or C eliminates expensive polymer laser welding!) |
+| **6** | **Non-Skid ETFE Embossing Blanket (`1.85 × 0.95 m`)** | `$2,500 – $5,000` | Cast `3 mm` scrim-reinforced `Mold Max 60` platinum silicone over `Treadmaster`/`Griptex` master: **`$800 – $1,300`** | N/A | **BUILD** (reusable for `100+` cycles) |
+| **7** | **Hardtop Bimini & Dodger Female Molds** | Yard hardtop shell: `$15k–$28k` | Single-axis cambered `1/8"` Formica bent over CNC-cut `3/4"` plywood ribs + `4.5 mm` flush PV/T recess lands + infusion kit: **`$1,200 – $2,200`** | CNC-cut plywood ribs (`~$250`) | **BUILD** (integrates flush PV/T rabbets & concealed beam plumbing) |
+| **8** | **Stage-2 Cold Vacuum Bonding Press** | `$8,000 – $15,000` | Reuse Laminator (heaters OFF) + nylon vacuum bags over cambered hardtop mold: **`$200 – $400`** | N/A | **BUILD / REUSE** |
+| **9** | **QC Rig (EL Camera, IV Load, `2.5 bar` Leak Rig)** | `$35,000 – $75,000` | Converted NIR mirrorless camera + `950 nm` filter + `60V/10A` PSU + `400W` electronic load + pressure manifold: **`$1,300 – $1,800`** | N/A | **BUILD** (`95%` of factory diagnostics) |
+| **10** | **Template Capture & Nesting CAD/CAM** | `$10,000 – $35,000` | Extend [`process_window_templates.py`](../acrylic-port-refit/process_window_templates.py) + Python `shapely`/`ezdxf` packer: **`$0`** | N/A | **BUILD** |
+| **TOTAL** | **Phase 2 Hybrid Tooling + All Beneteau 40 Materials** | Commercial retail passive equivalent (`$73k–$105k`, no cooling) | **Hybrid Tooling:** **`$8,500 – $14,500`** *(+ `$4k` if buying fiber laser)*<br>**`14 m²` PV/T + Hardtop BOM:** **`~$8,500`** | **Total All-In Project Cost:** **`$17,000 – $23,000`** | **Saves `$55,000+` on 1 boat while retaining full boutique tooling** |
+
+### C. Local Annapolis / Baltimore Region CNC & Plastic Resources
+* **Maritime Fabrication** *(Gambrills, MD — 12 min from Annapolis Mall; `1-866-397-2540`)* — Marine plastic CNC & laser cutting specialists.
+* **Piedmont Plastics (Baltimore/Washington)** *(Elkridge, MD — `7045 Troy Hill Dr`; `301-881-7900`)* — Full-sheet distributor with in-house CNC routing.
+* **Total Plastics – Baltimore** *(Baltimore, MD — `5424 Pulaski Hwy`; `800-492-4695`)* — Stocks `PVDF` (`Kynar`), `PP-R`, `Delrin`, acrylic, and polycarbonate with in-house CNC routing, laser cutting, and plastic welding.
+* **Harbor Sales** *(Sudlersville, MD — delivers to Annapolis)* — Marine plywood, composite cores, and plastics with high-volume CNC nesting.
+* **Open Works Baltimore** *(Baltimore, MD — ~35 min north)* — Member-access industrial **`4 × 8 ft` Laguna SmartShop ATC vacuum-table CNC router**, `ShopBot PRS Alpha` routers, metal shop (for welding the laminator lid), and woodshop (for hardtop molds).
+* **Annapolis Makerspace** *(42 Hudson St, Annapolis)* — Local CNC router and laser access for rapid Phase 1 `300 × 300 mm` coupons and alignment jigs.
