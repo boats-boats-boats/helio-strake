@@ -3,7 +3,7 @@
 ## 1. Project Overview
 `helio-strake` (**HelioStrake**) is an R&D and manufacturing engineering repository for **custom-shaped, walkable marine photovoltaic-thermal (PV/T) solar panels** that replace deck non-skid surfaces while actively cooling the solar cells and collecting thermal energy via a **`1–2 mm` micro-channel polymer/composite substrate**.
 
-Primary reference document: [`custom-solar-non-skid-pvt-guide.md`](custom-solar-non-skid-pvt-guide.md).
+Primary reference documents: [`custom-solar-non-skid-pvt-guide.md`](custom-solar-non-skid-pvt-guide.md) and [`sourcing-and-bom-guide.md`](sourcing-and-bom-guide.md).
 
 ---
 
@@ -36,7 +36,11 @@ When generating designs, calculations, BOMs, CAD/CAM scripts, or manufacturing i
    * **Before selling Phase 3 commercially with a multi-year warranty**, the substrate **must shift away from Polycarbonate** (which fails `85°C / 85% RH` IEC 61215 damp-heat hydrolysis, `85°C–95°C` pump-off stagnation, and third-party boatyard chemical exposure like acetone, diesel drips, teak acid/caustic cleaners, and acetoxy silicone) to one of three qualification-grade architectures:
      1. **`PVDF` (`Kynar 740`) Micro-Channel Substrate** (thermally/laser-welded or single-shot `150°C` laminated; chemically inert, survives `100°C+` stagnation and `IEC 61215` damp heat/thermal cycling),
      2. **`PP-R` / `PE-RT` Polymer Capillary Mat** cast in `ATH`/`SiC`-filled thermally conductive marine polyurethane or toughened epoxy (zero CNC micro-milling, zero weld seams, immune to boiling water, solvents, and `-40°C` freeze cycles), or
-     3. **CNC-Routed `Divinycell H130` / `G10` Core + Hard-Anodized `5083`/`6061` Aluminum or High-Modulus Carbon-Epoxy Skin** (bonded to the Stage-1 PV skin with a compliant `0.5 mm` thermally conductive neutral-cure silicone or polyurethane elastomer to absorb CTE mismatch across `-40°C to +85°C` IEC thermal cycles).
+     3. **CNC-Routed High-Temp `PET` (`ArmaFORM`/`Kerdyn`/`CoreLite PET`, `100°C–120°C`) / `Corecell` / `Divinycell HT` Core + Hard-Anodized `5083`/`6061` Aluminum or Carbon-Epoxy Skin:**
+        * Do **not** use standard `70°C` PVC `Divinycell H130` (softens under `90°C` pump-off stagnation) and do **not** use `6 mm` `G10` on curved decks (`E ≈ 20,000 MPa`, `100×` too rigid and `10×` too heavy; limit thin `3 mm` `G10` to dead-flat panels only).
+        * Seal CNC-routed foam channel cells with **2 wet-on-tacky coats of degassed high-$T_g$ (`≥100°C`) infusion epoxy** cleared with a `15–20 PSI` air-gun pass so channels remain unclogged.
+        * Because a foam core becomes a rigid sandwich once skinned, vacuum-bond curved hardtop panels directly on the cambered hardtop mold, and use semi-flexible **`PP-R`/`PE-RT` capillary mats in marine PU** (or thin `PVDF`) for compound-curved deck islands.
+        * Always bond the Stage-1 PV skin onto anodized aluminum using a **`0.5 mm` compliant thermally conductive neutral-cure alkoxy silicone** (`DOWSIL SE 4420`/`TC-4025`) to absorb Al CTE mismatch across `-40°C/+85°C` IEC thermal cycles.
 
 ---
 
